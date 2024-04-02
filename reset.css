@@ -1,0 +1,169 @@
+/* Reset de CSS básico */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Corrige la visualización en IE 6/7/8/9 */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* Corrige los estilos de listas de navegación para IE 6/7 (puede no ser necesario en el futuro) */
+ol, ul {
+    list-style: none;
+}
+
+/* Inicia las reglas de la hoja de estilos del usuario con contenido útil */
+body {
+    line-height: 1;
+}
+
+/* Corrige la falta de padding en FireFox 3/4 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Corrige la visualización de los bordes de la tabla en IE 6/7/8/9 */
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+/* Elimina el sangrado de texto subrayado y sobrescrito */
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+/* Restablece la visualización del cursor del botón */
+button, input, select, textarea {
+    margin: 0;
+    font-size: 100%;
+    vertical-align: middle;
+}
+
+/* Restablece la visualización de bordes */
+button, input {
+    line-height: normal;
+}
+
+/* Corrige la visualización de los bordes de los botones de los navegadores que no son Firefox */
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+/* Restablece la alineación del botón del campo de entrada de Safari 4 */
+input[type="checkbox"], input[type="radio"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/* Corrige la visualización de la selección de elementos en IE 6/7/8/9 */
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0;
+}
+
+/* Oculta el salto invisible de Chrome 29+ */
+textarea {
+    overflow: auto;
+}
+
+/* Restablece la visualización predeterminada */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* Restablece la fuente en la configuración de monoespacio para pre */
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+/* Corrige los estilos de reemplazo de lista para Safari 5, Chrome */
+code, kbd, pre, samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+/* Ajustes de impresión de CSS */
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a, a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+        content: "";
+    }
+
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr, img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2, h3 {
+        page-break-after: avoid;
+    }
+}
